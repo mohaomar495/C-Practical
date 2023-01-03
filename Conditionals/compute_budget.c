@@ -6,11 +6,17 @@ int main(void)
     int sum = 0;
 
     printf("sequence numbers: ");
-    scanf("%d", &sequence_numb);
-    while (sequence_numb != -1)
+    while (-1)
     {
         scanf("%d", &sequence_numb);
-        sum += sequence_numb;
+        if (sequence_numb == -1)
+        {
+            break;
+        }
+        else
+        {
+            sum += sequence_numb;
+        }
     }
-    printf("the sum: %d\n", sum+1);
+    printf("the sum: %d\n", sum);
 }
